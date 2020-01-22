@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    tools:context=".SettingActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:layout_marginTop="65dp"
+        android:layout_centerHorizontal="true"
+        android:text="Setting"
+        android:textColor="#ffffff"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/numOfTasks"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Number Of Questions"
+        android:fontFamily="sans-serif"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:layout_alignStart="@+id/enterNum"
+        android:layout_marginTop="200dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="15"
+        android:id="@+id/enterNum"
+        android:backgroundTint="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:hint="Please Enter the number of Question"
+        android:layout_marginTop="245dp"
+        android:layout_centerHorizontal="true" />
+    <TextView
+        android:id="@+id/passGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Passing Grade"
+        android:fontFamily="sans-serif"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:layout_alignStart="@+id/enterGrade"
+        android:layout_marginTop="325dp"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="15"
+        android:id="@+id/enterGrade"
+        android:backgroundTint="#ffffff"
+        android:textColorHint="#ffffff"
+        android:textColor="#ffffff"
+        android:hint="Please Enter the Passing grade"
+        android:layout_marginTop="375dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="66dp"
+        android:layout_alignTop="@+id/enterGrade"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:background="@android:color/transparent"
+        android:text="Apply"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="66dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/button3"
+        android:layout_marginTop="70dp"
+        android:background="@android:color/transparent"
+        android:text="Back"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
+
+</RelativeLayout>
