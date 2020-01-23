@@ -15,8 +15,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Welcome Page action
-        Button start=(Button)findViewById(R.id.button);
-        Button setting=(Button)findViewById(R.id.button2);
+        Button start= findViewById(R.id.button);
+        Button setting= findViewById(R.id.button2);
         final EditText playerName = (EditText)findViewById(R.id.enterName);
 
         setting.setOnClickListener(new View.OnClickListener() {
