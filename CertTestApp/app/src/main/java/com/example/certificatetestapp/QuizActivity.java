@@ -86,6 +86,17 @@ public class QuizActivity extends AppCompatActivity {
                     optionTwo.setText(options[questionNumber* choices + 1]);
                     optionThree.setText(options[questionNumber* choices + 2]);
                     optionFour.setText(options[questionNumber* choices + 3]);
+                }else{
+                    int correct = 0;
+                    for (int temp : results) {
+                        if(temp == 1) {
+                            correct++;
+                        }
+                    }
+                    Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    intent.putExtra("correct","You got "+String.valueOf(correct)+" correct.");
+                    startActivity(intent);
                 }
                 radioGroup.clearCheck();
             }

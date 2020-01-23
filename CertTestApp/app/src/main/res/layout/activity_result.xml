@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_color"
+    tools:context=".ResultActivity">
+
+    <View android:id="@+id/centerLine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:layout_marginTop="77dp"
+        android:layout_centerHorizontal="true"
+        android:text="You got 3 correct"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="60dp" />
+    <Button
+        android:id="@+id/home"
+        android:layout_margin="500dp"
+        android:layout_width="wrap_content"
+        android:layout_height="66dp"
+        android:layout_alignTop="@+id/enterName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="121dp"
+        android:background="@android:color/transparent"
+        android:text="Home"
+        android:textColor="#ffffff"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="25dp" />
+</RelativeLayout>
