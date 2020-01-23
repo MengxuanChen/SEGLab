@@ -36,14 +36,12 @@
 
     <Button
         android:id="@+id/home"
-        android:layout_margin="500dp"
         android:layout_width="wrap_content"
         android:layout_height="66dp"
-        android:layout_alignTop="@+id/enterName"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="121dp"
         android:background="@android:color/transparent"
         android:text="Home"
+        android:layout_marginTop="580dp"
         android:textColor="#ffffff"
         android:fontFamily="sans-serif-condensed-light"
         android:textSize="25dp" />

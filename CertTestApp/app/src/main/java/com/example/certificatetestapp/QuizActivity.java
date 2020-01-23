@@ -13,6 +13,8 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
 import java.util.LinkedList;
 import com.example.certificatetestapp.SharedData;
 
@@ -24,14 +26,18 @@ public class QuizActivity extends AppCompatActivity {
     
     RadioGroup radioGroup;
     RadioButton optionOne, optionTwo, optionThree, optionFour;
-    
+
     TextView playerName;
 
     String questions[] = {
 
     };
     String answers[] = {};
-    String options[] = {};
+    String options[] = {
+
+    };
+
+
 
     LinkedList<Integer> results=new LinkedList<>();
     int questionNumber= 0;
@@ -57,6 +63,11 @@ public class QuizActivity extends AppCompatActivity {
         optionTwo = (RadioButton) findViewById(R.id.optionTwo);
         optionThree = (RadioButton) findViewById(R.id.optionThree);
         optionFour = (RadioButton) findViewById(R.id.optionFour);
+
+        questions = Arrays.copyOfRange(questions,0,sharedData.getNumberOfQuestions());
+        options = Arrays.copyOfRange(options,0,sharedData.getNumberOfQuestions()*choices);
+        answers = Arrays.copyOfRange(answers,0,sharedData.getNumberOfQuestions());
+
 
         currentQuestion.setText(questions[questionNumber]);
         optionOne.setText(options[0]);
