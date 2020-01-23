@@ -1,6 +1,7 @@
 package com.example.certificatetestapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -26,8 +27,7 @@ public class QuizActivity extends AppCompatActivity {
     TextView playerName;
 
     String questions[] = {
-
-    };
+};
     String answers[] = {};
     String options[] = {
 
@@ -62,6 +62,7 @@ public class QuizActivity extends AppCompatActivity {
         optionFour.setText(options[3]);
 
         previousButton.setEnabled(false);
+        previousButton.setTextColor(Color.parseColor("#939393"));
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -70,6 +71,7 @@ public class QuizActivity extends AppCompatActivity {
                     return;
                 }
                 previousButton.setEnabled(true);
+                previousButton.setTextColor(Color.parseColor("#ffffff"));
                 RadioButton selectedAnswer = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
                 String selectedAnswerString = selectedAnswer.getText().toString();
                 if (selectedAnswerString.equals(answers[questionNumber])) {
@@ -112,6 +114,7 @@ public class QuizActivity extends AppCompatActivity {
                 questionNumber--;
                 if(questionNumber== 0){
                     previousButton.setEnabled(false);
+                    previousButton.setTextColor(Color.parseColor("#939393"));
                 }
                 if (questionNumber< questions.length) {
                     currentQuestion.setText(questions[questionNumber]);
