@@ -27,7 +27,7 @@
         android:textColor="#ffffff"
         android:layout_alignStart="@+id/enterNum"
         android:layout_marginTop="200dp"
-        />
+        android:layout_alignLeft="@+id/enterNum" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -38,7 +38,7 @@
         android:backgroundTint="#ffffff"
         android:textColorHint="#ffffff"
         android:textColor="#ffffff"
-        android:hint="Please Enter the number of Question"
+        android:hint="Enter the number of Question (5-30)"
         android:layout_marginTop="245dp"
         android:layout_centerHorizontal="true" />
     <TextView
@@ -51,7 +51,7 @@
         android:textColor="#ffffff"
         android:layout_alignStart="@+id/enterGrade"
         android:layout_marginTop="325dp"
-        />
+        android:layout_alignLeft="@+id/enterGrade" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -62,7 +62,7 @@
         android:backgroundTint="#ffffff"
         android:textColorHint="#ffffff"
         android:textColor="#ffffff"
-        android:hint="Please Enter the Passing grade"
+        android:hint="Enter the Passing grade (0-100)"
         android:layout_marginTop="375dp"
         android:layout_centerHorizontal="true" />
 
