@@ -7,16 +7,37 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import com.example.certificatetestapp.SharedData;
 
 public class ResultActivity extends AppCompatActivity {
-    TextView result;
+    TextView result,mark;
     Button homeButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result);
+        final SharedData sharedData = SharedData.getInstance();
+
+        String correct = getIntent().getStringExtra("correct");
         result = (TextView) findViewById(R.id.result);
-        result.setText(getIntent().getStringExtra("correct"));
+        mark = (TextView) findViewById(R.id.mark);
+
+        int percentMark = (int) Math.round(Integer.parseInt(correct) * 100.0/sharedData.getNumberOfQuestions());
+
+
+        String correctString = "You got "+correct+"/"+String.valueOf(sharedData.getNumberOfQuestions())+
+                " correct.";
+        String markString = "";
+        if(percentMark>=sharedData.getaPssingGrade() ){
+            markString = "Your mark is  "+String.valueOf(percentMark)+"%."+"You passed.";
+        }else{
+            markString = "Your mark is  "+String.valueOf(percentMark)+"%."+"You failed.";
+
+        }
+
+
+        result.setText(correctString);
+        mark.setText(markString);
         homeButton = (Button) findViewById(R.id.home);
         homeButton.setOnClickListener(new View.OnClickListener() {
             @Override
