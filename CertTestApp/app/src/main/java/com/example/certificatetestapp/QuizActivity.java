@@ -14,6 +14,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.LinkedList;
+import com.example.certificatetestapp.SharedData;
 
 
 public class QuizActivity extends AppCompatActivity {
@@ -27,11 +28,11 @@ public class QuizActivity extends AppCompatActivity {
     TextView playerName;
 
     String questions[] = {
-};
-    String answers[] = {};
-    String options[] = {
 
     };
+    String answers[] = {};
+    String options[] = {};
+
     LinkedList<Integer> results=new LinkedList<>();
     int questionNumber= 0;
     final int choices = 4;
@@ -40,6 +41,8 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+        final SharedData sharedData = SharedData.getInstance();
+
         playerName = (TextView) findViewById(R.id.textView);
         playerName.setText(getIntent().getStringExtra("name"));
 
@@ -97,7 +100,7 @@ public class QuizActivity extends AppCompatActivity {
                     }
                     Intent intent = new Intent(getApplicationContext(), ResultActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                    intent.putExtra("correct","You got "+String.valueOf(correct)+" correct.");
+                    intent.putExtra("correct",String.valueOf(correct));
                     startActivity(intent);
                 }
                 radioGroup.clearCheck();
