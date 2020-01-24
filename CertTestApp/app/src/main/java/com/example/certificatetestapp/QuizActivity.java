@@ -76,7 +76,7 @@ public class QuizActivity extends AppCompatActivity {
         optionFour.setText(options[3]);
 
         previousButton.setEnabled(false);
-        previousButton.setTextColor(Color.parseColor("#939393"));
+        previousButton.setTextColor(Color.parseColor("#808080"));
         nextButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -128,7 +128,7 @@ public class QuizActivity extends AppCompatActivity {
                 questionNumber--;
                 if(questionNumber== 0){
                     previousButton.setEnabled(false);
-                    previousButton.setTextColor(Color.parseColor("#939393"));
+                    previousButton.setTextColor(Color.parseColor("#808080"));
                 }
                 if (questionNumber< questions.length) {
                     currentQuestion.setText(questions[questionNumber]);
