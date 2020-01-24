@@ -24,12 +24,11 @@ public class SettingActivity extends AppCompatActivity {
         Button apply= findViewById(R.id.button3);
         Button back= findViewById(R.id.button4);
         final EditText numQuestion = findViewById(R.id.enterNum);
-        final EditText passGrade =  findViewById(R.id.enterGrade);
-
+        final EditText passGrade = findViewById(R.id.enterGrade);
+        numQuestion.setFilters(new InputFilter[]{ new InputFilters(1,100)});
+        passGrade.setFilters(new InputFilter[]{new InputFilters(0,100)});
         numQuestion.setText(String.valueOf(sharedData.getNumberOfQuestions()));
         passGrade.setText(String.valueOf(sharedData.getaPssingGrade()));
-        numQuestion.setFilters(new InputFilter[]{ new InputFilters(5,30)});
-        passGrade.setFilters(new InputFilter[]{new InputFilters(0,100)});
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,11 +52,4 @@ public class SettingActivity extends AppCompatActivity {
         });
     }
 
-    public int getGrade() {
-        return grade;
-    }
-
-    public int getNum(){
-        return num;
-    }
 }
