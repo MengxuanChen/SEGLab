@@ -18,20 +18,30 @@
         android:fontFamily="sans-serif-thin"
         android:layout_marginTop="77dp"
         android:layout_centerHorizontal="true"
-        android:text="You got 3 correct"
+        android:text="You got 3/5 correct"
         android:textColor="#ffffff"
         android:gravity="center"
         android:textSize="60dp" />
+    <TextView
+        android:id="@+id/mark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-thin"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
+        android:text="You got 80%, you passed."
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:textSize="60dp" />
+
     <Button
         android:id="@+id/home"
-        android:layout_margin="500dp"
         android:layout_width="wrap_content"
         android:layout_height="66dp"
-        android:layout_alignTop="@+id/enterName"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="121dp"
         android:background="@android:color/transparent"
         android:text="Home"
+        android:layout_marginTop="580dp"
         android:textColor="#ffffff"
         android:fontFamily="sans-serif-condensed-light"
         android:textSize="25dp" />

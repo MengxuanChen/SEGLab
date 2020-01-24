@@ -16,111 +16,136 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-thin"
-        android:layout_marginTop="77dp"
+        android:layout_marginTop="30dp"
         android:text="Get Cert"
+        android:paddingLeft="20dp"
         android:textColor="#ffffff"
-        android:textSize="60dp" />
+        android:textSize="40dp" />
+
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Questions"
         android:id="@+id/currentQuestion"
-        android:layout_marginBottom="52dp"
-        android:fontFamily="sans-serif-condensed-light"
-        android:textColor="#ffffff"
-        android:layout_above="@+id/radioGroup"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:paddingLeft="15dp"
+        android:text="This is a really long question and it dispalyes verything that needs to be displayed"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#ffffff" />
+
+    <RadioGroup
         android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:clickable="true"
-        android:layout_centerVertical="true"
-        >
+        android:paddingLeft="15dp"
+        android:paddingBottom="30dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="15dp"
+        android:scaleX="1.5"
+        android:scaleY="1.5">
 
         <RadioButton
+            android:id="@+id/optionOne"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="A"
-            android:fontFamily="sans-serif-condensed-light"
-            android:textColor="#ffffff"
             android:buttonTint="#ffffff"
-            android:id="@+id/optionOne"
             android:checked="false"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="A"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="15dp"
+            android:textColor="#ffffff"
+
             />
 
         <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="B"
-            android:fontFamily="sans-serif-condensed-light"
-            android:textColor="#ffffff"
-            android:buttonTint="#ffffff"
             android:id="@+id/optionTwo"
-            android:checked="false" />
-
-        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="C"
-            android:fontFamily="sans-serif-condensed-light"
-            android:textColor="#ffffff"
             android:buttonTint="#ffffff"
+            android:checked="false"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="B"
+
+            android:textColor="#ffffff" />
+
+
+        <RadioButton
             android:id="@+id/optionThree"
-            android:checked="false" />
-
-        <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="D"
-            android:fontFamily="sans-serif-condensed-light"
-            android:textColor="#ffffff"
             android:buttonTint="#ffffff"
+            android:checked="false"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="C"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#ffffff" />
+
+        <RadioButton
             android:id="@+id/optionFour"
-            android:checked="false" />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:buttonTint="#ffffff"
+            android:checked="false"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="D"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#ffffff" />
 
     </RadioGroup>
 
     <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Next"
         android:id="@+id/nextButton"
-        android:layout_marginTop="27dp"
-        android:layout_below="@+id/radioGroup"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:background="@android:color/transparent"
-        android:fontFamily="sans-serif-condensed-light"
-        android:textColor="#ffffff"
-        android:textSize="25dp" />
-    <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pervious"
-        android:id="@+id/previousButton"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/nextButton"
-        android:layout_alignParentRight="true"
+        android:layout_below="@+id/radioGroup"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
         android:background="@android:color/transparent"
         android:fontFamily="sans-serif-condensed-light"
+        android:text="Next"
         android:textColor="#ffffff"
         android:textSize="25dp" />
 
     <Button
+        android:id="@+id/quitButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Quit"
-        android:id="@+id/quitButton"
-        android:layout_marginTop="20dp"
         android:layout_below="@+id/previousButton"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
         android:background="@android:color/transparent"
         android:fontFamily="sans-serif-condensed-light"
+        android:text="Quit"
+        android:textColor="#ffffff"
+        android:textSize="25dp" />
+
+    <Button
+        android:id="@+id/previousButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nextButton"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:background="@android:color/transparent"
+        android:fontFamily="sans-serif-condensed-light"
+        android:text="Pervious"
         android:textColor="#ffffff"
         android:textSize="25dp" />
 
