@@ -20,7 +20,7 @@ public class SettingActivity extends AppCompatActivity {
         Button back= findViewById(R.id.button4);
         final EditText numQuestion = findViewById(R.id.enterNum);
         final EditText passGrade = findViewById(R.id.enterGrade);
-        numQuestion.setFilters(new InputFilter[]{ new InputFilters(5,30)});
+        numQuestion.setFilters(new InputFilter[]{ new InputFilters(1,100)});
         passGrade.setFilters(new InputFilter[]{new InputFilters(0,100)});
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -42,11 +42,4 @@ public class SettingActivity extends AppCompatActivity {
         });
     }
 
-    public int getGrade() {
-        return grade;
-    }
-
-    public int getNum(){
-        return num;
-    }
 }
