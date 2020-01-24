@@ -29,12 +29,33 @@ public class QuizActivity extends AppCompatActivity {
 
     TextView playerName;
 
+    //https://codingcompiler.com/core-java-multiple-choice-questions-answers/ Quiz Questions
     String questions[] = {
-
+            "A process that involves recognizing and focusing on the important characteristics of a situation or object is known as",
     };
-    String answers[] = {};
     String options[] = {
-
+            "Encapsulation","Polymorphism","Abstraction","Inheritance",
+            "","","","",
+            "","","","",
+            "","","","",
+            "","","","",
+            "","","","",
+            "","","","",
+            "","","","",
+            "","","","",
+            "","","","",
+    };
+    String answers[] = {
+            "Abstraction",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
     };
 
 
