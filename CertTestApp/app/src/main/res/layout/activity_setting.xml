@@ -6,12 +6,17 @@
     android:background="@drawable/background_color"
     tools:context=".SettingActivity">
 
+    <View android:id="@+id/centerLine"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_centerInParent="true"/>
+
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-thin"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="60dp"
         android:layout_centerHorizontal="true"
         android:text="Settings"
         android:textColor="#ffffff"
@@ -26,7 +31,7 @@
         android:textSize="25dp"
         android:textColor="#ffffff"
         android:layout_alignStart="@+id/enterNum"
-        android:layout_marginTop="200dp"
+        android:layout_marginTop="170dp"
         android:layout_alignLeft="@+id/enterNum" />
 
     <EditText
@@ -39,7 +44,7 @@
         android:textColorHint="#ffffff"
         android:textColor="#ffffff"
         android:hint="Enter the number of questions (1-100)"
-        android:layout_marginTop="245dp"
+        android:layout_marginTop="210dp"
         android:layout_centerHorizontal="true" />
     <TextView
         android:id="@+id/passGrade"
@@ -50,7 +55,7 @@
         android:textSize="25dp"
         android:textColor="#ffffff"
         android:layout_alignStart="@+id/enterGrade"
-        android:layout_marginTop="325dp"
+        android:layout_marginTop="260dp"
         android:layout_alignLeft="@+id/enterGrade" />
 
     <EditText
@@ -63,16 +68,64 @@
         android:textColorHint="#ffffff"
         android:textColor="#ffffff"
         android:hint="Enter the Passing grade (1-100)"
-        android:layout_marginTop="375dp"
+        android:layout_marginTop="300dp"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quiz Category"
+        android:fontFamily="sans-serif"
+        android:textSize="25dp"
+        android:textColor="#ffffff"
+        android:layout_alignStart="@+id/enterGrade"
+        android:layout_marginTop="350dp"
+        android:layout_alignLeft="@+id/enterGrade" />
+    <RadioGroup
+        android:id="@+id/radioCategory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignTop="@+id/category"
+        android:layout_alignStart="@+id/category"
+        android:layout_marginTop="40dp">
+
+    <RadioButton
+        android:id="@+id/radioButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Math"
+        android:layout_alignTop="@+id/category"
+        android:layout_alignStart="@+id/category"
+        android:layout_marginTop="40dp"
+        android:textColor="#ffffff"
+        android:buttonTint="#ffffff"
+        android:checked="false"
+        android:textSize="20dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="75dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:buttonTint="#ffffff"
+            android:checked="true"
+            android:text="Coding"
+            android:textColor="#ffffff"
+            android:textSize="20dp" />
+    </RadioGroup>
 
     <Button
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="66dp"
-        android:layout_alignTop="@+id/enterGrade"
+        android:layout_alignTop="@+id/category"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="100dp"
         android:background="@android:color/transparent"
         android:text="Apply"
         android:textColor="#ffffff"
