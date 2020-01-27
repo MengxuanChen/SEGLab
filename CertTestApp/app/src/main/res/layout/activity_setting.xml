@@ -62,7 +62,7 @@
         android:backgroundTint="#ffffff"
         android:textColorHint="#ffffff"
         android:textColor="#ffffff"
-        android:hint="Enter the Passing grade (0-100)"
+        android:hint="Enter the Passing grade (1-100)"
         android:layout_marginTop="375dp"
         android:layout_centerHorizontal="true" />
 
