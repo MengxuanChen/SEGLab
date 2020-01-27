@@ -31,7 +31,7 @@
         android:backgroundTint="#ffffff"
         android:textColorHint="#ffffff"
         android:textColor="#ffffff"
-        android:hint="Please Enter Your Name Here"
+        android:hint="Please enter your name to start"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
@@ -56,7 +56,7 @@
         android:layout_alignTop="@+id/button"
         android:layout_marginTop="70dp"
         android:background="@android:color/transparent"
-        android:text="Setting"
+        android:text="Settings"
         android:fontFamily="sans-serif-condensed-light"
         android:textColor="#ffffff"
         android:textSize="25dp" />

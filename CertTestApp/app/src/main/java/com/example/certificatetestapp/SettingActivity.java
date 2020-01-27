@@ -1,8 +1,11 @@
 package com.example.certificatetestapp;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.text.Editable;
 import android.text.InputFilter;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -21,7 +24,7 @@ public class SettingActivity extends AppCompatActivity {
         Log.d("Share",String.valueOf(sharedData.getaPssingGrade()));
         Log.d("Share",String.valueOf(sharedData.getNumberOfQuestions()));
 
-        Button apply= findViewById(R.id.button3);
+        final Button apply= findViewById(R.id.button3);
         Button back= findViewById(R.id.button4);
         final EditText numQuestion = findViewById(R.id.enterNum);
         final EditText passGrade = findViewById(R.id.enterGrade);
@@ -62,6 +65,54 @@ public class SettingActivity extends AppCompatActivity {
 
                 sharedData.setNumberOfQuestions(num);
                 sharedData.setaPssingGrade(grade);
+            }
+        });
+        numQuestion.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(passGrade.length() == 0 || numQuestion.length()==0){
+                apply.setEnabled(false);
+                apply.setTextColor(Color.parseColor("#808080"));
+            }else{
+                apply.setTextColor(Color.parseColor("#FFFFFF"));
+                    apply.setEnabled(true);
+            }
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+
+            }
+        });
+
+        passGrade.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void afterTextChanged(Editable s) {
+                if(passGrade.length() == 0 || numQuestion.length()==0){
+                    apply.setEnabled(false);
+                    apply.setTextColor(Color.parseColor("#808080"));
+                }else{
+                    apply.setTextColor(Color.parseColor("#FFFFFF"));
+                    apply.setEnabled(true);
+
+                }
+            }
+
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count,
+                                          int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before,
+                                      int count) {
+
             }
         });
     }
