@@ -16,6 +16,7 @@ public class SharedData {
 
     private int numberOfQuestions;
     private int passingGrade;
+    private String cert = "Coding";
 
 
 
@@ -31,6 +32,7 @@ public class SharedData {
     public int getaPssingGrade() {
         return passingGrade;
     }
+    public String getCert(){return cert;}
 
     public int setNumberOfQuestions(int num) {
         return this.numberOfQuestions = num;
@@ -38,5 +40,6 @@ public class SharedData {
     public int setaPssingGrade(int num) {
         return this.passingGrade=num;
     }
+    public String setCert(String cert){return this.cert = cert;}
 
 }
