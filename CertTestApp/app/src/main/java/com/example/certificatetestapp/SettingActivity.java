@@ -29,9 +29,23 @@ public class SettingActivity extends AppCompatActivity {
         final EditText numQuestion = findViewById(R.id.enterNum);
         final EditText passGrade = findViewById(R.id.enterGrade);
         numQuestion.setFilters(new InputFilter[]{ new InputFilters(1,100)});
-        passGrade.setFilters(new InputFilter[]{new InputFilters(0,100)});
+        passGrade.setFilters(new InputFilter[]{new InputFilters(1,100)});
         numQuestion.setText(String.valueOf(sharedData.getNumberOfQuestions()));
         passGrade.setText(String.valueOf(sharedData.getaPssingGrade()));
+
+        numQuestion.setOnClickListener(new View.OnClickListener() {
+             @Override
+              public void onClick(View v){
+                 numQuestion.setHint("");
+             }
+        });
+
+        passGrade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                passGrade.setHint("");
+            }
+        });
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
