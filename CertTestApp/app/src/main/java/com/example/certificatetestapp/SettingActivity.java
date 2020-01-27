@@ -1,5 +1,6 @@
 package com.example.certificatetestapp;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,6 +11,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.certificatetestapp.SharedData;
 public class SettingActivity extends AppCompatActivity {
@@ -32,6 +37,20 @@ public class SettingActivity extends AppCompatActivity {
         passGrade.setFilters(new InputFilter[]{new InputFilters(1,100)});
         numQuestion.setText(String.valueOf(sharedData.getNumberOfQuestions()));
         passGrade.setText(String.valueOf(sharedData.getaPssingGrade()));
+        RadioGroup radioGroup = findViewById(R.id.radioCategory);
+
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @SuppressLint("ResourceType")
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                RadioButton rb = group.findViewById(checkedId);
+                if (null != rb && checkedId > -1) {
+                    sharedData.setCert(rb.getText().toString());
+                    Toast.makeText(SettingActivity.this, rb.getText(), Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
 
         numQuestion.setOnClickListener(new View.OnClickListener() {
              @Override
