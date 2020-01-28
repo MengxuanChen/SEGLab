@@ -20,6 +20,7 @@ import com.example.certificatetestapp.SharedData;
 public class SettingActivity extends AppCompatActivity {
     private int num = 10;
     private int grade = 60;
+    RadioButton rb;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,14 +39,19 @@ public class SettingActivity extends AppCompatActivity {
         numQuestion.setText(String.valueOf(sharedData.getNumberOfQuestions()));
         passGrade.setText(String.valueOf(sharedData.getaPssingGrade()));
         RadioGroup radioGroup = findViewById(R.id.radioCategory);
+        if(sharedData.getCert().equals("Math")){
+            radioGroup.check(R.id.radioButton1);
+        }else{
+            radioGroup.check(R.id.radioButton2);
+        }
+
 
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @SuppressLint("ResourceType")
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
-                RadioButton rb = group.findViewById(checkedId);
+                rb = group.findViewById(checkedId);
                 if (null != rb && checkedId > -1) {
-                    sharedData.setCert(rb.getText().toString());
                     Toast.makeText(SettingActivity.this, rb.getText(), Toast.LENGTH_SHORT).show();
                 }
 
@@ -84,6 +90,8 @@ public class SettingActivity extends AppCompatActivity {
 
                 sharedData.setNumberOfQuestions(num);
                 sharedData.setaPssingGrade(grade);
+                sharedData.setCert(rb.getText().toString());
+
             }
         });
         numQuestion.addTextChangedListener(new TextWatcher() {
