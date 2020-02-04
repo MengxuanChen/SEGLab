@@ -38,7 +38,7 @@ public class SettingActivity extends AppCompatActivity {
         passGrade.setFilters(new InputFilter[]{new InputFilters(1,100)});
         numQuestion.setText(String.valueOf(sharedData.getNumberOfQuestions()));
         passGrade.setText(String.valueOf(sharedData.getaPssingGrade()));
-        RadioGroup radioGroup = findViewById(R.id.radioCategory);
+        final RadioGroup radioGroup = findViewById(R.id.radioCategory);
         if(sharedData.getCert().equals("Math")){
             radioGroup.check(R.id.radioButton1);
         }else{
@@ -90,7 +90,10 @@ public class SettingActivity extends AppCompatActivity {
 
                 sharedData.setNumberOfQuestions(num);
                 sharedData.setaPssingGrade(grade);
-                sharedData.setCert(rb.getText().toString());
+                sharedData.setCert(
+                        ((RadioButton)findViewById(radioGroup.getCheckedRadioButtonId()))
+                                .getText().toString()
+                );
 
             }
         });
